@@ -12,7 +12,7 @@
 
     <div class="container">
         <a href="#">
-            <img class="limonadaImg" src="limonada2.png" alt="limonada">
+            <img class="limonadaImg" src="limonada.png" alt="limonada">
         </a>
 
         <div class="grid">
@@ -31,14 +31,28 @@
         <div class="texto-sobre-imagem">
             Somos uma construtora referência em São José e toda região da Grande Florianópolis
 
-
-            <div class="cursorSaibaMais">
-                <img class="cursor" src="cursor.png" alt="">
-                <a class="saibaMais" href="#">Saiba mais</a>
+            <div class="cursorSaibaMais" id="cursorSaibaMais">
+                <img class="cursor" src="cursorAmarelo.png" alt="cursos">
+                Saiba mais
             </div>
+
         </div>
     </div>
-
 </body>
+
+<script>
+    window.onload = function () {
+        var divSaibaMais = document.getElementById('cursorSaibaMais');
+        var imgCursor = document.querySelector('.cursor');
+
+        divSaibaMais.addEventListener('mouseover', function () {
+            imgCursor.src = 'cursor.png';
+        });
+
+        divSaibaMais.addEventListener('mouseout', function () {
+            imgCursor.src = 'cursorAmarelo.png';
+        });
+    };
+</script>
 
 </html>
